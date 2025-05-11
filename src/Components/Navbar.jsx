@@ -14,7 +14,7 @@ const containerVariants = {
             delayChildren: 0.2,
             when: "beforeChildren",
             ease: [0.42, 0, 1, 1],
-            duration: 0.5,
+            duration: 0.8,
         },
     },
 };
@@ -53,7 +53,7 @@ const mobileLinkVariants = {
     exit: { opacity: 0, x: -50 },
 };
 
-const Navbar = () => {
+const Navbar = ({ onAnimationComplete }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
@@ -69,7 +69,8 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="fixed w-full bg-gradient-to-r from-primary to-secondary shadow-lg z-50"
+            onAnimationComplete={onAnimationComplete}
+            className="fixed w-full bg-gradient-to-r from-primary/85  to-primary/50 shadow-lg z-50 opacity-100"
         >
             <div className="max-w-7xl mx-auto px-4 py-3 md:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
