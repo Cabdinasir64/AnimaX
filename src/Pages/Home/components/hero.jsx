@@ -141,7 +141,6 @@ const HeroSection = ({ startAnimation }) => {
                             <img
                                 src="https://cdn.pixabay.com/photo/2017/08/01/09/07/mobile-2563782_1280.jpg"
                                 alt=""
-                                loading="lazy"
                                 className="w-full h-full object-cover rounded-2xl"
                             />
                         </div>
