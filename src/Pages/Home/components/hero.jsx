@@ -1,7 +1,11 @@
 import { delay, motion } from "framer-motion";
 import { FaChevronRight } from "react-icons/fa";
+import { useScroll, useTransform } from "framer-motion";
 
 const HeroSection = ({ startAnimation }) => {
+    // Scroll-linked transformations
+    const { scrollYProgress } = useScroll();
+    const Y = useTransform(scrollYProgress, [0, 1], [-90, 1000]);
     // Parent container variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -26,12 +30,13 @@ const HeroSection = ({ startAnimation }) => {
                 case "left":
                     return { x: -30, opacity: 0 };
                 default:
-                    return { opacity: 0 };
+                    return { opacity: 0, scale: 0.3 };
             }
         },
         visible: {
             x: 0,
             y: 0,
+            scale: 1,
             opacity: 1,
             transition: {
                 duration: 0.8,
@@ -127,18 +132,8 @@ const HeroSection = ({ startAnimation }) => {
 
                 {/* Hero Image */}
                 <motion.div
-                    variants={{
-                        hidden: { scale: 0.1, opacity: 0 },
-                        visible: {
-                            scale: 1,
-                            opacity: 1,
-                            transition: {
-                                type: "spring",
-                                stiffness: 60,
-                                damping: 10,
-                            },
-                        },
-                    }}
+                    style={{ y: Y }}
+                    variants={itemVariants}
                     className="mt-16 md:mt-24 relative"
                 >
                     <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-white/5 backdrop-blur-sm border border-white/10">
