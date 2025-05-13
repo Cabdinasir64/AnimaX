@@ -137,7 +137,7 @@ const HeroSection = ({ startAnimation }) => {
                     className="mt-16 md:mt-24 relative"
                 >
                     <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                        <div className="aspect-w-16 aspect-h-9  bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-8">
+                        <div className="aspect-w-16 aspect-h-9  bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center p-4 md:p-8">
                             <img
                                 src="https://cdn.pixabay.com/photo/2017/08/01/09/07/mobile-2563782_1280.jpg"
                                 alt=""
