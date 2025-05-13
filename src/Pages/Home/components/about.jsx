@@ -65,7 +65,7 @@ const About = () => {
                         transition={{ duration: 0.8 }}
                         className="relative h-96 rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 to-secondary/10"
                     >
-                        <img src="https://cdn.pixabay.com/photo/2015/01/08/18/23/white-board-593309_1280.jpg" alt="Our Vison" loading="lazy" className="w-full h-full object-cover" />
+                        <img src="https://cdn.pixabay.com/photo/2015/01/08/18/23/white-board-593309_1280.jpg" alt="Our Vison" className="w-full h-full object-cover" />
                     </motion.div>
 
                     <motion.div
