@@ -3,6 +3,7 @@ import Navbar from "../../Components/Navbar.jsx";
 import Hero from './components/hero.jsx';
 import About from './components/about.jsx'
 import Service from './components/service.jsx'
+import Feature from './components/feature.jsx'
 
 const Home = () => {
   const [heroAnimationStarted, setHeroAnimationStarted] = useState(false);
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero startAnimation={heroAnimationStarted} />
       <About />
       <Service />
+      <Feature />
     </>
   );
 };
