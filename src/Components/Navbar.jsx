@@ -58,8 +58,8 @@ const Navbar = ({ onAnimationComplete }) => {
 
     const navItems = [
         { name: "Home", to: "/" },
-        { name: "Services", to: "/services" },
         { name: "About", to: "/about" },
+         { name: "Services", to: "/services" },
         { name: "Features", to: "/features" },
         { name: "Contact", to: "/contact" },
     ];
