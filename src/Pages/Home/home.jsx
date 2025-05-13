@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../../Components/Navbar.jsx";
 import Hero from './components/hero.jsx';
+import About from './components/about.jsx'
 
 const Home = () => {
   const [heroAnimationStarted, setHeroAnimationStarted] = useState(false);
@@ -9,6 +10,7 @@ const Home = () => {
     <>
       <Navbar onAnimationComplete={() => setHeroAnimationStarted(true)} />
       <Hero startAnimation={heroAnimationStarted} />
+      <About />
     </>
   );
 };
